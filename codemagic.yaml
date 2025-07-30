@@ -9,7 +9,8 @@ workflows:
       - yarn install
       - yarn build
       - cd ./samples/app/android
-      - chmod +x gradlew           # make sure it's executable
+      - ls
+      - chmod +x ./gradlew           # make sure it's executable
       - ./gradlew assembleRelease
     artifacts:
       - .samples/app/android/app/build/outputs/**/*.apk

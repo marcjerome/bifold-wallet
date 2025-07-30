@@ -2,8 +2,9 @@ workflows:
   build-android-apk:
     name: Bifold Android APK Build
     environment:
-      android: true
-      node: 20
+      vars:
+        NODE_VERSION: 20
+      node: $NODE_VERSION
     scripts:
       - yarn install
       - yarn build
